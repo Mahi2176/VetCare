@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    #gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .image-container {
+      margin: 10px;
+      text-align: center;
+    }
+    .image-container img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="gallery">
+  <div class="image-container" onclick="showInfo(0)">
+    <img src="C:\xampp\htdocs\VetCare\images\c2.jpg" alt="Image 1">
+    <p>Image 1 Information</p>
+  </div>
+  <div class="image-container" onclick="showInfo(1)">
+    <img src="C:\xampp\htdocs\VetCare\images\c1.jpg" alt="Image 2">
+    <p>Image 2 Information</p>
+  </div>
+  <!-- Add more image containers as needed -->
+</div>
+<button onclick="showMessageBox('Message 1')">Show Message 1</button>
+<button onclick="showMessageBox('Message 2')">Show Message 2</button>
+
+<div id="message-box">
+  <h2>Message</h2>
+  <p id="message-text"></p>
+  <button onclick="closeMessageBox()">Close</button>
+</div>
+
+<script>
+  function showMessageBox(message) {
+    var messageBox = document.getElementById('message-box');
+    var messageText = document.getElementById('message-text');
+    messageText.textContent = message;
+    messageBox.style.display = 'block';
+  }
+
+  function closeMessageBox() {
+    var messageBox = document.getElementById('message-box');
+    messageBox.style.display = 'none';
+  }
+</script>
+
+</body>
+</html>

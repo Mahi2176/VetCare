@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Care Insights</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .container-fluid footer_section 
+        {
+            background-color: #f5f5f5;
+          color:black ;
+        }
+
+        header {
+            background-color: #9fe5c4;
+            color: #121315;
+            padding: 5px;
+            text-align: center;
+        }
+
+        main {
+            display: flex;
+            height: calc(100% - 92px); /* Subtract header height */
+        }
+
+        .image-section {
+            width: 50%;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            overflow: auto;
+        }
+
+        .video-section {
+            width: 50%;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            overflow: auto;
+        }
+
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .image-container img {
+            width: 48%;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .image-info {
+            display: none;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            margin-top: 10px;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .image-section,
+            .video-section {
+                width: 100%;
+            }
+        }   
+    
+        footer {
+            background-color: #ffffff; /* White background */
+            color: #000000; /* Black text */
+            text-align: center;
+            padding: 1rem;
+        }
+       
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pet Care Insights</h1>
+    </header>
+
+    <main>
+        <div class="image-section">
+            <h2>Some Snapshots</h2>
+            <div class="image-container">
+                <img src="images/training.jpg" alt="Pet Image 1" data-info="
+                Pet training is a rewarding journey that requires consistency, patience, and positive reinforcement. Starting early with clear communication and gentle guidance sets the foundation for success. Rewarding desired behaviors with treats or praise reinforces good habits, while redirection helps curb unwanted actions. Socialization from an early age fosters confidence and adaptability, while regular exercise keeps pets mentally and physically stimulated. Setbacks are natural, so patience is crucial; persisting with understanding and kindness builds trust and strengthens the bond between you and your pet. Remember, seeking professional guidance is always an option if you encounter challenges beyond your expertise. Ultimately, pet training is a collaborative effort that enhances the well-being and happiness of both pet and owner.">
+                <img src="images/img2.jpg" alt="Pet Image 2" data-info="
+                Regular checkups are vital for your pet's health and well-being. These appointments allow veterinarians to monitor your pet's overall health, detect any potential issues early, and provide preventive care such as vaccinations, parasite control, and dental cleanings. During these visits, the vet will conduct a thorough physical examination, discuss your pet's diet, behavior, and lifestyle, and address any concerns you may have. Routine checkups help ensure your pet stays healthy and happy for years to come.">
+                <img src="images/emergency.jpg" alt="Pet Image 3" data-info="
+                Vaccinations are essential to protect your pet from potentially serious and even life-threatening diseases. These vaccines stimulate your pet's immune system to produce antibodies against specific viruses or bacteria. Regular vaccinations starting from a young age help prevent diseases like rabies, distemper, parvovirus, and feline leukemia. Your veterinarian will create a vaccination schedule tailored to your pet's species, age, lifestyle, and risk factors. Keeping up with these vaccinations not only safeguards your pet's health but also contributes to public health by preventing the spread of contagious diseases.">
+                <img src="images/demo2.jpg" alt="Pet Image 4" data-info="
+                Nutrition plays a crucial role in your pet's overall health and well-being. Providing a balanced diet tailored to your pet's species, age, size, and activity level is essential. High-quality commercial pet foods formulated by veterinary nutritionists often meet these needs, but it's important to read labels and choose products with appropriate ingredients. Avoid feeding your pet table scraps or foods that are toxic to them, such as chocolate, onions, or grapes. Regularly monitoring your pet's weight and adjusting their diet as needed helps prevent obesity and related health issues. Additionally, consulting with your veterinarian for personalized dietary recommendations ensures your pet receives the nutrients they need for optimal health throughout their life.">
+            </div>
+            <div class="image-info"></div>
+        </div>
+
+        <div class="video-section">
+            <h2>Some Informative Videos</h2>
+            <div>
+                <video controls width="100%" height="360" autoplay loop muted>
+                    <source src="6014419_Farm_Veterinarian_Vet_3840x2160.mp4" type="video/mp4">
+                    <source src="path/to/your/video.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                  </video>
+            </div><br><br><br>
+            <div class="video-container">
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/SOmZckDIPOY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <br><br><br>
+            <div class="video-container">
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/nUhVFtZm5Sg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            
+            </div>
+            <br><br><br>
+            <div class="video-container">
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/ZpXB7pBNpYs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+    </main>
+    <footer class="container-fluid footer_section " style="background-color: white;">
+        <p>
+          &copy; <span id="displayDate"></span> All Rights Reserved. Design by
+          <a href="https://index.html/">PetCare</a>
+        </p>
+      </footer>
+
+    <script>
+        // JavaScript code for image info display
+        const images = document.querySelectorAll('.image-container img');
+        const imageInfo = document.querySelector('.image-info');
+
+        images.forEach(image => {
+            image.addEventListener('click', () => {
+                const info = image.dataset.info;
+                imageInfo.style.display = 'block';
+                imageInfo.textContent = info;
+            });
+        });
+
+        imageInfo.addEventListener('click', () => {
+            imageInfo.style.display = 'none';
+        });
+    </script>
+</body>
+</html>

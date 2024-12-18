@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Material CSS */
+    @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      height: 100vh;
+    }
+
+    .image-container {
+      flex: 1;
+      background-image: url('images/UserReg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .form-container {
+      flex: 1;
+      background-image: url('https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1629&q=80');
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f5f5f5;
+    }
+
+    .registration-card {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 4px;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+      width: 400px;
+      max-width: 90%;
+    }
+
+    .registration-card h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .registration-card input[type="text"],
+    .registration-card input[type="email"],
+    .registration-card input[type="password"] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .registration-card button {
+      background-color: #3a1de0;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="image-container"></div>
+  <div class="form-container">
+    <div class="registration-card">
+      <h2> Admin Login</h2>
+      <form class="form" action="adminlogin.php" method="post">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+        <button type="submit">Login</button>
+       
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript
+    const form = document.getElementById('registrationForm');
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault(); // Prevent form submission
+
+      const username = document.getElementById('username').value;      
+      const password = document.getElementById('password').value;
+
+      // Perform registration logic here (e.g., send data to a server)
+      console.log('Username:', username);
+      console.log('Password:', password);
+
+      // Reset form fields
+      form.reset();
+    });
+  </script>
+</body>
+</html>
